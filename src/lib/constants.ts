@@ -1,0 +1,1 @@
+export const NAVER_API_ADDRESS: string = 'https://openapi.naver.com/v1';
