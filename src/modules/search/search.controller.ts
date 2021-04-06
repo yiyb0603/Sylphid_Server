@@ -15,13 +15,13 @@ export default class SearchController {
     @Query('start') start: number,
     @Query('type') type: ESearch,
   ): Promise<IResponse> {
-    const blogs = await this.searchService.getSearchResult(query, start, type);
+    const results = await this.searchService.getSearchResult(query, start, type);
 
     return {
       status: 200,
       message: '블로그 글 목록을 검색하였습니다.',
       data: {
-        blogs,
+        results,
       },
     };
   }

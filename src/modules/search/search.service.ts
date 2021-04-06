@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { ValidationError } from 'class-validator';
 import { HttpError } from 'exception/HttpError';
 import { customAxios } from 'lib/customAxios';
 import { ESearch } from 'lib/enum/ESearch';
@@ -15,7 +14,7 @@ export default class SearchService {
     const url: string = `/search/${searchType}.json?query=${encodeURI(query)}&start=${start}&display=10`;
     const { data } = await customAxios.get(url);
     
-    const blogs = data.items;
-    return blogs;
+    const results = data.items;
+    return results;
   }
 }
