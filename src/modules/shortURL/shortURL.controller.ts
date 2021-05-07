@@ -1,5 +1,6 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { IResponse } from 'types/Response';
+import { ShortURLDto } from './dto/shortURL.dto';
 import ShortURLService from './shortUrl.service';
 
 @Controller('/short-url')
@@ -8,11 +9,11 @@ export default class ShortURLController {
     private readonly shortURLService: ShortURLService,
   ) {}
 
-  @Get('/')
+  @Post('/')
   public async getShortURL(
-    @Query('url') url: string,
+    @Body() shortURLDto: ShortURLDto,
   ): Promise<IResponse> {
-    const shortURL: string = await this.shortURLService.getShortURL(url);
+    const shortURL: string = await this.shortURLService.getShortURL(shortURLDto);
 
     return {
       status: 200,

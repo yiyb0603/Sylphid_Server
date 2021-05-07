@@ -11,5 +11,5 @@ export enum ELanguageCode {
   RUSSIAN             = 'ru', // 러시아어
   SPANISH             = 'es', // 스페인어
   ITALIAN             = 'it', // 이탈리아어
-  FRENCH               = 'fr', // 프랑스어
+  FRENCH              = 'fr', // 프랑스어
 };
