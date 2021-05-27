@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { HttpError } from 'exception/HttpError';
 import { customAxios } from 'lib/customAxios';
 import { ShortURLDto } from './dto/shortURL.dto';
 

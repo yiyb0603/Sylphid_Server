@@ -1,4 +1,4 @@
 export enum ESearch {
-  BLOG = 0,
-  NEWS = 1,
+  BLOG = 'blog',
+  NEWS = 'news',
 };
