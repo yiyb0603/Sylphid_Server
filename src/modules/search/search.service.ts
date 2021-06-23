@@ -10,7 +10,7 @@ export default class SearchService {
       throw new HttpError(400, '검증 오류입니다.');
     }
 
-    const url: string = `/search/${type}.json?query=${encodeURI(query)}&start=${start}&display=10`;
+    const url: string = `/search/${type}.json?query=${encodeURI(query)}&start=${start}&display=30`;
     const { data } = await customAxios.get(url);
     
     const results = data.items;
